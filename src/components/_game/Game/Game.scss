@@ -1,0 +1,13 @@
+.game_window-wrapper {
+  width: fit-content;
+  padding: 10px;
+  background-color: #c0c0c0;
+  border: 4px outset #ececec;
+  margin: 0 auto;
+}
+
+.game_window {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}

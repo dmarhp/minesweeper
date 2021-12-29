@@ -1,0 +1,15 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.game__field{
+  //display: flex;
+}
+
+
+.clear {
+  clear: both;
+  content: "0";
+}

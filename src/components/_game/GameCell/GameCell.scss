@@ -1,0 +1,47 @@
+.cell{
+ background: #c0c0c0;
+ border: 1px solid #808080;
+ float: left;
+ line-height: 30px;
+ height: 30px;
+ text-align: center;
+ width: 30px;
+ cursor: pointer;
+ color: #333333;
+ font-weight: 800;
+}
+
+.cell:focus {
+ outline: none;
+}
+
+.hidden {
+ background-color: #c0c0c0;
+ border: 3px outset #ececec;
+}
+
+.hidden:hover {
+ border: 1px solid #808080;
+}
+
+.is-flag,
+.is-mine {
+ color: #fc543c;
+}
+
+.number-blue {
+ color: blue;
+}
+
+.number-green {
+ color: green;
+}
+
+.number-red {
+ color: red;
+}
+
+.number-black {
+ color: darkslateblue;
+}
+
