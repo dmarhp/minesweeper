@@ -1,13 +1,21 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { GameField } from '../GameField/GameField';
-import { GameStatusType } from '../../../game-logic/Types';
+import { Status } from '../../../game-logic/Types';
 import './Game.scss';
 import { GameStats } from '../GameStats/GameStats';
 import { useAppSelector } from '../../../store/hooks';
 
 export const Game = () => {
-  const [gameStatus, setGameStatus] = useState(GameStatusType.PLAY);
+  const [gameStatus, setGameStatus] = useState(Status.WAIT);
   const [minesLeft, setMinesLeft] = useState(useAppSelector((state) => state.mineList.length));
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!minesLeft) {
+      navigate('/settings');
+    }
+  }, []);
 
   return (
     <div>

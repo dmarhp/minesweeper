@@ -12,9 +12,9 @@ const minesSlice = createSlice({
   name: 'minesSlice',
   initialState,
   reducers: {
-    setMines: (state, { payload }) => payload,
+    saveMines: (state, { payload }) => payload,
   },
 });
 
-export const { setMines } = minesSlice.actions;
+export const { saveMines } = minesSlice.actions;
 export default minesSlice.reducer;

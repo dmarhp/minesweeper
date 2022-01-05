@@ -5,7 +5,6 @@ interface GameCellProps {
   cell: Cell;
   toggleLeftClick: () => void;
   toggleRightClick: ()=>void;
-
 }
 
 const getCellValue = (cell:Cell) => {

@@ -16,10 +16,10 @@ export const gameFieldSlice = createSlice({
   name: 'gameFieldSlice',
   initialState,
   reducers: {
-    setGameField: (state:Cell[][], { payload }) => payload,
+    saveGameField: (state:Cell[][], { payload }) => payload,
 
   },
 });
 
-export const { setGameField } = gameFieldSlice.actions;
+export const { saveGameField } = gameFieldSlice.actions;
 export default gameFieldSlice.reducer;

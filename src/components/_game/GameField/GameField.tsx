@@ -5,13 +5,13 @@ import { GameCell } from '../GameCell/GameCell';
 import './GameField.scss';
 import { Cell } from '../../../store/gameFieldSlice';
 import { traverseBoard } from '../../../game-logic/createGame';
-import { GameStatusType } from '../../../game-logic/Types';
+import { Status } from '../../../game-logic/Types';
 
 let flags: Mine[] = [];
 
 interface GameFieldProps{
-  gameStatus: GameStatusType;
-  toggleStatus: (status: GameStatusType) => void;
+  gameStatus: Status;
+  toggleStatus: (status: Status) => void;
   toggleMinesLeft: (minesLeft: number)=> void,
 }
 
@@ -19,16 +19,17 @@ export const GameField = ({ gameStatus, toggleStatus, toggleMinesLeft }:GameFiel
   const [field, setField] = useState(useAppSelector((state) => state.gameField));
   const mineList = useAppSelector((state) => state.mineList);
   const settings = useAppSelector((state) => state.settings);
-  const gameField111 = JSON.parse(JSON.stringify(field));
+  const gameField = JSON.parse(JSON.stringify(field));
+  const isFinished = gameStatus === Status.LOSE || gameStatus === Status.WIN;
 
   const revealEmpty = (cell: Cell) => {
-    const area = traverseBoard(cell, gameField111, settings);
+    const area = traverseBoard(cell, gameField, settings);
 
     area.forEach((item) => {
       const { x, y, isFlagged, isRevealed, isEmpty, isMine } = item;
 
       if (!isFlagged && !isRevealed && (isEmpty || !isMine)) {
-        gameField111[x][y].isRevealed = true;
+        gameField[x][y].isRevealed = true;
 
         if (isEmpty) {
           revealEmpty(item);
@@ -51,11 +52,10 @@ export const GameField = ({ gameStatus, toggleStatus, toggleMinesLeft }:GameFiel
           }
         });
       });
-
       winner = countMines === 0;
     } else {
       let hiddenCells = 0;
-      gameField111.forEach((row: Cell[]) => (
+      gameField.forEach((row: Cell[]) => (
         row.forEach((rowCell) => {
           if (!rowCell.isRevealed) {
             hiddenCells++;
@@ -64,14 +64,15 @@ export const GameField = ({ gameStatus, toggleStatus, toggleMinesLeft }:GameFiel
       ));
       winner = hiddenCells === mines;
     }
+
     if (winner) {
-      toggleStatus(GameStatusType.WIN);
+      toggleStatus(Status.WIN);
     }
   };
 
   const updateFlagList = () => {
     flags = [];
-    gameField111.forEach((row: Cell[]) => {
+    gameField.forEach((row: Cell[]) => {
       row.forEach(({ isFlagged, x, y }) => {
         if (isFlagged) {
           flags.push({ x, y });
@@ -86,17 +87,18 @@ export const GameField = ({ gameStatus, toggleStatus, toggleMinesLeft }:GameFiel
   const onLeftClick = (cell: Cell) => {
     const { x, y, isRevealed, isFlagged, isMine, isEmpty } = cell;
 
-    if (!isRevealed && !isFlagged && gameStatus === GameStatusType.PLAY) {
-      gameField111[x][y].isRevealed = true;
+    if (!isRevealed && !isFlagged && !isFinished) {
+      gameField[x][y].isRevealed = true;
+
       if (isMine) {
-        gameField111.forEach((row: Cell[]) => {
+        gameField.forEach((row: Cell[]) => {
           row.forEach((rowCell) => {
             // eslint-disable-next-line no-param-reassign
             rowCell.isRevealed = true;
           });
         });
 
-        toggleStatus(GameStatusType.LOSE);
+        toggleStatus(Status.LOSE);
       }
 
       if (isEmpty) {
@@ -104,18 +106,24 @@ export const GameField = ({ gameStatus, toggleStatus, toggleMinesLeft }:GameFiel
       }
 
       checkWinner();
+      setField(gameField);
     }
-
-    setField(gameField111);
+    if (gameStatus === 'WAIT') {
+      toggleStatus(Status.PLAY);
+    }
   };
 
   const onRightCluck = (cell: Cell) => {
     const { x, y, isRevealed, isFlagged } = cell;
 
-    if (!isRevealed && gameStatus === GameStatusType.PLAY) {
-      gameField111[x][y].isFlagged = (!isFlagged && flags.length < 10);
+    if (!isRevealed && !isFinished) {
+      gameField[x][y].isFlagged = (!isFlagged && flags.length < 10);
       updateFlagList();
-      setField(gameField111);
+      setField(gameField);
+
+      if (gameStatus === 'WAIT') {
+        toggleStatus(Status.PLAY);
+      }
     }
   };
 
@@ -133,7 +141,8 @@ export const GameField = ({ gameStatus, toggleStatus, toggleMinesLeft }:GameFiel
               />
 
               {(fieldRow[fieldRow.length - 1] === cell)
-                ? <div key={`Cl${fieldRow.length}`} className="clear" /> : ''}
+                ? <div key={`Cl${fieldRow.length}`} className="clear" />
+                : ''}
             </React.Fragment>
           ))
         ))
@@ -142,13 +151,3 @@ export const GameField = ({ gameStatus, toggleStatus, toggleMinesLeft }:GameFiel
     </div>
   );
 };
-
-/*
-<MineCell
-                key={`C${cell.x}${cell.y}`}
-                className={getCellClassName(cell)}
-                value={getCellValue(cell)}
-                leftClick={() => handleCellClick(cell.x, cell.y)}
-                rightClick={(event) => handleRightClick(event, cell.x, cell.y)}
-              />
- */

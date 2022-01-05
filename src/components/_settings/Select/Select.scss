@@ -1,0 +1,25 @@
+.select__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  border: 2px ridge #ececec;
+  padding: 5px 50px;
+  width: 100%;
+
+  font-size: 20px;
+}
+
+.select__button {
+  padding: 5px 10px;
+  background-color: #c0c0c0;
+  border: 4px outset #ececec;
+  font-size: 20px;
+
+  &:focus{
+    outline: none;
+  }
+  &:active{
+    border-style: inset;
+  }
+}

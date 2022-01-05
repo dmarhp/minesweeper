@@ -1,6 +1,7 @@
 // eslint-disable-next-line no-shadow
-export enum GameStatusType {
+export enum Status {
   WIN = 'WIN',
   LOSE = 'LOSE',
-  PLAY = 'PLAY'
+  PLAY = 'PLAY',
+  WAIT = 'WAIT'
 }
