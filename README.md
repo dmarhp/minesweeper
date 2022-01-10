@@ -1,5 +1,7 @@
 <h2> Minesweeper React<h2>
 
+https://minesweeper-lac-five.vercel.app/settings
+
 ---
 Classic single-player logic based game. Players goal is to locate all randomly placed mines in game field.
 
