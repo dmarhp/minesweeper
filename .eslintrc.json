@@ -28,7 +28,8 @@
         "@typescript-eslint"
     ],
     "rules": {
-        //"no-param-reassign": 0,//
+        "no-undef": "off",
+        "no-shadow": "off",
         "object-curly-newline": ["error", {
             "ObjectPattern": "never"
         }],

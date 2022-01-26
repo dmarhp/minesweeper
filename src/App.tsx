@@ -1,9 +1,8 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import logo from './logo.svg';
 import './App.scss';
-import { Settings } from './components/_settings/Settings/Settings';
-import { Game } from './components/_game/Game/Game';
+import { Settings } from './components/settings/Settings/Settings';
+import { Game } from './components/game/Game/Game';
 
 const App = () => (
   <Routes>

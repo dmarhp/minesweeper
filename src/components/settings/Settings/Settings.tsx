@@ -6,9 +6,7 @@ import './Settings.scss';
 import { createGameField } from '../../../game-logic/createGame';
 import { saveGameField } from '../../../store/gameFieldSlice';
 import { saveMines } from '../../../store/minesSlice';
-import { GameField } from '../../_game/GameField/GameField';
 import { saveSettings } from '../../../store/settingSlice';
-import { Game } from '../../_game/Game/Game';
 
 const options = [8, 12, 16, 20, 24];
 const mineAmount = [10, 15, 20, 25, 30, 35, 40];

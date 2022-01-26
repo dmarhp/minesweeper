@@ -3,15 +3,12 @@ import './GameStats.scss';
 import { useNavigate } from 'react-router-dom';
 import { cleanup } from '@testing-library/react';
 import { Status } from '../../../game-logic/Types';
-import { useAppDispatch, useAppSelector } from '../../../store/hooks';
-import { createGameField } from '../../../game-logic/createGame';
 
 interface GameStatsProps{
   gameStatus: Status
   minesLeft: number;
 }
 
-// eslint-disable-next-line no-undef
 let timer: NodeJS.Timeout;
 
 export const GameStats = ({ gameStatus, minesLeft }:GameStatsProps) => {
