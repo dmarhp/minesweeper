@@ -1,0 +1,22 @@
+@import "src/Styles/variables";
+
+.home-page {
+  padding: 40px;
+  background-color: $background-grey-1;
+  @include outline-outset-4;
+  min-width: 60%;
+  margin: 40px auto;
+  
+  &__title {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 20px;
+  }
+  
+  &__difficulty {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+}

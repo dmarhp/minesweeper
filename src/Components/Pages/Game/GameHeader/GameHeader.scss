@@ -1,0 +1,27 @@
+@import "./src/Styles/variables";
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: $border-inset-2;
+  margin-bottom: 10px;
+  padding: 10px;
+
+  &__face {
+    border: $border-outset-3;
+    padding: 0;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+
+    &:active {
+      border: $border-solid-1;
+      padding: 3px;
+    }
+
+    &.loser {
+      background-color: $color-red;
+    }
+  }
+}

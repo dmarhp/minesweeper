@@ -1,0 +1,30 @@
+@import "./src/Styles/variables";
+
+.board--cell {
+  background-color: $background-grey-2;
+  border: $border-solid-1;
+  float: left;
+  height: 30px;
+  text-align: center;
+  width: 30px;
+  cursor: pointer;
+  padding: 2px;
+
+  &.highlighted {
+    background-color: $color-red;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &.hidden {
+    border: $border-outset-3;
+    padding: 0;
+
+    &:hover {
+      border: $border-solid-1;
+      padding: 2px;
+    }
+  }
+}

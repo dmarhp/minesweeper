@@ -1,17 +1,26 @@
-<h2> Minesweeper React<h2>
+# [Minesweeper.react](https://minesweeper-lac-five.vercel.app/settings)
 
-https://minesweeper-lac-five.vercel.app/settings
+Minesweeper is classic single-player logic based game.
+<br/>
+Players goal is to locate all randomly placed mines in game field.
+---
+
+## Game difficulty options:
+- **Beginner** ( 9 x 9 cell board and 10 mines )
+- **Intermediate** ( 16 x 16 cell board and 40 mines )
+- **Expert** ( 30 x 16 cell board and 99 mines )
+- **Advanced** ( custom board size and mine amount )
+---
+
+## Screenshots:
+
+<img src="./src/assets/screen-01.png" height=400>
+<br/>
+<img src="./src/assets/screen-02.png" height=400>
 
 ---
-Classic single-player logic based game. Players goal is to locate all randomly placed mines in game field.
-
-In the setting screen the player can choose the width and height of the field, and the number of mines placed.
-
-Game starts after player opens or marks one of cell.
-
-Settings screen:
-![settings](./src/assets/screen-settings.png)
-
-Game:
-![settings](./src/assets/screen-game.png)
-
+## Changelog:
+### 2023-04:
+> - Refactored game UI
+> - Added predefined game settings
+> - Game logic bug fixes

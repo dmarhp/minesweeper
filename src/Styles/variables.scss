@@ -1,0 +1,23 @@
+$background-body: #008689;
+$background-grey-1: #D3D3D3;
+$background-grey-2: #C0C0C0;
+
+$color-primary: #ECECEC;
+$color-white: #FFFFFF;
+$color-grey-1: #ECECEC;
+$color-grey-2: #808080;
+$color-black-1: #000000;
+$color-red: #FF0000;
+
+$border-outset-2: 2px outset $color-primary;
+$border-outset-3: 3px outset $color-primary;
+$border-outset-4: 4px outset $color-grey-1;
+$border-inset-2: 2px inset $color-primary;
+$border-inset-3: 3px inset $color-primary;
+$border-ridge-2: 2px ridge $color-primary;
+$border-solid-1: 1px solid $color-grey-2;
+
+@mixin outline-outset-4 {
+  outline: 4px outset #ececec;
+  outline-offset: -4px;
+}

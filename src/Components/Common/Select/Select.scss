@@ -1,0 +1,85 @@
+@import "src/Styles/variables";
+
+.select {
+  display: flex;
+  position: relative;
+  user-select: none;
+  min-width: 100px;
+  font-weight: 500;
+
+  &__button {
+    border: $border-outset-4;
+    background-color: $background-grey-1;
+    padding: 4px 6px 4px 20px;
+    width: 100%;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    cursor: pointer;
+
+    &:hover {
+      background-color: $background-grey-2;
+    }
+
+    &:active {
+      border-style: $background-grey-2;
+    }
+    
+    &__title {
+      width: calc(100% - 12px);
+      text-align: center;
+    }
+    
+    &__icon {
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  &--disabled {
+    .select__button {
+      pointer-events: none;
+      cursor: default;
+
+      &__title {
+        color: $color-grey-2;
+      }
+
+      &__icon {
+        fill: $color-grey-2;
+      }
+    }
+  }
+
+  &--opened {
+    .select__button {
+      background-color: $background-grey-2;
+
+      &__icon {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__options {
+    position: absolute;
+    top: 40px;
+    border: $border-ridge-2;
+    border-top: none;
+    width: calc(100% - 4px);
+    z-index: 1;
+    cursor: pointer;
+
+    .select__option {
+      padding: 6px 12px;
+      text-align: center;
+      background-color: $background-grey-1;
+
+      &:hover {
+        background-color: $background-grey-2;
+      }
+    }
+  }
+}

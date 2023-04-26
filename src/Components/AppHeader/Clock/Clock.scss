@@ -1,0 +1,26 @@
+@import "src/Styles/variables";
+
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  55% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.clock {
+  &__divider {
+    animation: blink 3s linear infinite;
+  }
+}

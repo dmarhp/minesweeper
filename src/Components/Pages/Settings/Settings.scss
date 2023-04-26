@@ -1,0 +1,33 @@
+@import "./src/Styles/variables";
+
+.settings {
+  padding: 40px;
+  background-color: $background-grey-1;
+  @include outline-outset-4;
+  min-width: 60%;
+  margin: 40px auto;
+  
+  &__title {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 20px;
+  }
+  
+  &__content {
+    width: 100%;
+
+    .settings__details {
+      border: $border-ridge-2;
+      padding: 20px 40px;
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+    }
+  }
+  
+  &__actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+}

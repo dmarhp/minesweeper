@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with Vectornator (http://vectornator.io/) -->
+<svg stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 2.4948 2.4948" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<radialGradient cx="0.504771" cy="0.511833" gradientTransform="matrix(2.835 0 0 2.835 -0.354905 -0.357817)" gradientUnits="userSpaceOnUse" id="RadialGradient" r="0.154587">
+<stop offset="0" stop-color="#ffffff"/>
+<stop offset="0.129412" stop-color="#e5e5e1"/>
+<stop offset="0.290196" stop-color="#ccc8c8"/>
+<stop offset="0.439216" stop-color="#b2b4b4"/>
+<stop offset="0.74902" stop-color="#464d43"/>
+<stop offset="1" stop-color="#000000"/>
+</radialGradient>
+</defs>
+<clipPath id="ArtboardFrame">
+<rect height="2.4948" width="2.4948" x="0" y="0"/>
+</clipPath>
+<g clip-path="url(#ArtboardFrame)" id="Layer_x0020_1">
+<path d="M0.0181355 1.3234L-5.55112e-17 1.24531L0.0181355 1.16614L1.16905 1.16614L1.16905 0.015224L1.2472 5.55112e-17L1.32631 0.015224L1.32631 1.16614L2.47724 1.16614L2.48871 1.24513L2.47724 1.3234L1.32631 1.3234L1.32631 2.47433L1.25151 2.48793L1.16905 2.47433L1.16905 1.3234L0.0181355 1.3234Z" fill="#000000" fill-rule="evenodd" opacity="1" stroke="#000000" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="0.00920731"/>
+<path d="M0.504247 0.617758C0.504247 0.548888 0.560077 0.493057 0.628948 0.493057C0.697818 0.493057 0.753648 0.548888 0.753648 0.617758C0.753648 0.686628 0.697818 0.742458 0.628948 0.742458C0.560077 0.742458 0.504247 0.686628 0.504247 0.617758Z" fill="#000000" fill-rule="evenodd" opacity="1" stroke="#000000" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="0.00920731"/>
+<path d="M0.491563 2.10421L0.424105 2.06587L0.388242 2.00089L1.14436 1.24478L0.388242 0.488666L0.431572 0.423441L0.491563 0.385342L1.24768 1.14145L2.0038 0.38533L2.06915 0.42419L2.10712 0.488652L1.351 1.24478L2.10712 2.0009L2.07164 2.06817L2.0038 2.10422L1.24768 1.3481L0.491563 2.10421Z" fill="#000000" fill-rule="evenodd" opacity="1" stroke="#000000" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="0.00920731"/>
+<path d="M1.12947 0.370526C1.12947 0.301656 1.1853 0.245825 1.25417 0.245825C1.32304 0.245825 1.37887 0.301656 1.37887 0.370526C1.37887 0.439396 1.32304 0.495227 1.25417 0.495227C1.1853 0.495227 1.12947 0.439396 1.12947 0.370526Z" fill="#000000" fill-rule="evenodd" opacity="1" stroke="#000000" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="0.00920731"/>
+<path d="M0.389861 1.23048C0.389861 0.756715 0.773924 0.372652 1.24769 0.372652C1.72145 0.372652 2.10552 0.756715 2.10552 1.23048C2.10552 1.70425 1.72145 2.08831 1.24769 2.08831C0.773924 2.08831 0.389861 1.70425 0.389861 1.23048Z" fill="url(#RadialGradient)" fill-rule="evenodd" opacity="1" stroke="none"/>
+<path d="M1.71748 0.651168C1.71748 0.582298 1.77331 0.526468 1.84218 0.526468C1.91105 0.526468 1.96688 0.582298 1.96688 0.651168C1.96688 0.720039 1.91105 0.775869 1.84218 0.775869C1.77331 0.775869 1.71748 0.720039 1.71748 0.651168Z" fill="#000000" fill-rule="evenodd" opacity="1" stroke="#000000" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="0.00920731"/>
+<path d="M0.524293 1.83903C0.524293 1.77016 0.580124 1.71433 0.648994 1.71433C0.717864 1.71433 0.773694 1.77016 0.773694 1.83903C0.773694 1.9079 0.717864 1.96373 0.648994 1.96373C0.580124 1.96373 0.524293 1.9079 0.524293 1.83903Z" fill="#000000" fill-rule="evenodd" opacity="1" stroke="#000000" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="0.00920731"/>
+<path d="M1.71748 1.83903C1.71748 1.77016 1.77331 1.71433 1.84218 1.71433C1.91105 1.71433 1.96688 1.77016 1.96688 1.83903C1.96688 1.9079 1.91105 1.96373 1.84218 1.96373C1.77331 1.96373 1.71748 1.9079 1.71748 1.83903Z" fill="#000000" fill-rule="evenodd" opacity="1" stroke="#000000" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="0.00920731"/>
+<path d="M0.981026 1.12149C0.981026 1.05764 1.03279 1.00587 1.09665 1.00587C1.16051 1.00587 1.21227 1.05764 1.21227 1.12149C1.21227 1.18535 1.16051 1.23712 1.09665 1.23712C1.03279 1.23712 0.981026 1.18535 0.981026 1.12149Z" fill="#ffffff" fill-rule="evenodd" opacity="1" stroke="none"/>
+</g>
+</svg>

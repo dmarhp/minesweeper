@@ -1,0 +1,7 @@
+@import "./src/Styles/variables";
+
+.board {
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+}

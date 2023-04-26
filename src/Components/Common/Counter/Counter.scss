@@ -1,0 +1,18 @@
+@import "./src/Styles/variables";
+
+.counter {
+  height: 40px;
+  border: $border-ridge-2;
+  padding: 4px;
+  display: flex;
+  gap: 2px;
+  background-color: $color-black-1;
+
+  .counter--digit { 
+    fill: $color-red;
+    stroke: $color-red;
+    svg {
+      height: 100%;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@import "./src/Styles/variables";
+
+.game__container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 50px;
+
+  .game {
+    background-color: $background-grey-1;
+    @include outline-outset-4;
+    padding: 10px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+}
